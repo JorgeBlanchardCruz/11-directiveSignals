@@ -15,5 +15,9 @@ export class ProductPageComponent {
     name: ['', [Validators.required, Validators.minLength(6), Validators.email] ],
   });
 
+  public changeColor(): void {
+    const color = '#xxxxxx'.replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    this.color = color;
+  }
 
 }
