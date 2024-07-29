@@ -29,6 +29,10 @@ export class PropertiesPageComponent implements OnDestroy, OnInit {
 
       this.counter.update(current => current + 1);
 
+      if (this.counter() === 15) {
+        this.userChangedEffect.destroy();
+      }
+
     }, 1000);
   }
 
